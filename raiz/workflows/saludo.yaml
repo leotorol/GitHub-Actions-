@@ -3,12 +3,20 @@ name: Saludo
 on:
   push:
     branches:
-      - main  # Se ejecuta con cada push a la rama main
+      - main
 
 jobs:
   saludar-al-usuario:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Mostrar un saludo
-        run: echo "¡Hola"
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Imprimir saludo
+        run: echo "¡Hola."
+
+      - name: Listar archivos del repositorio
+        run: ls -la
+
 
