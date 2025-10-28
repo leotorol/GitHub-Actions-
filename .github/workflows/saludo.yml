@@ -1,0 +1,20 @@
+name: Saludo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  saludar-al-usuario:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Imprimir saludo
+        run: echo "¡Hola."
+
+      - name: Listar archivos del repositorio
+        run: ls -la
