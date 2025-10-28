@@ -3,11 +3,12 @@ name: Saludo
 on:
   push:
     branches:
-      - main  # Esto hace que se dispare con cada push a la rama main
+      - main  # Se ejecuta con cada push a la rama main
 
 jobs:
-  saludo:
+  saludar-al-usuario:
     runs-on: ubuntu-latest
     steps:
-      - name: Imprimir un saludo
-        run: echo "¡Hola desde GitHub Actions!"
+      - name: Mostrar un saludo
+        run: echo "¡Hola"
+
